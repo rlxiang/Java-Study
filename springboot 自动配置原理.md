@@ -179,7 +179,7 @@ public class HttpEncodingAutoConfiguration {
     
     //给容器中添加一个组件，这个组件的某些值需要从properties中获取
     @Bean
-    @ConditionalOnMissingBean //判断容器没有这个组件？
+    @ConditionalOnMissingBean //判断容器没有这个组件
     public CharacterEncodingFilter characterEncodingFilter() {
         CharacterEncodingFilter filter = new OrderedCharacterEncodingFilter();
         filter.setEncoding(this.properties.getCharset().name());

@@ -701,8 +701,7 @@ id name password -- 实体类属性名
 2. 配置文件编写
 
    ```properties
-   #将等级为DEBUG的日志信息输出到console和file这两个目的地，console和file的定义在下
-   面的代码
+   #将等级为DEBUG的日志信息输出到console和file这两个目的地，console和file的定义在下面的代码
    log4j.rootLogger=DEBUG,console,file
    #控制台输出的相关设置
    log4j.appender.console = org.apache.log4j.ConsoleAppender
@@ -724,7 +723,7 @@ id name password -- 实体类属性名
    log4j.logger.java.sql.ResultSet=DEBUG
    log4j.logger.java.sql.PreparedStatement=DEBUG
    ```
-
+   
 3. setting设置日志实现
 
 4. 在程序中使用Log4j进行输出！
@@ -867,8 +866,7 @@ SELECT * FROM table LIMIT 5; //检索前 5 个记录行
 - 大家之前都学过面向对象编程，也学习过接口，但在真正的开发中，很多时候我们会选择面向接口编程
 - 根本原因 : 解耦 , 可拓展 , 提高复用 , 分层开发中 , 上层不用管具体的实现 , 大家都遵守共同的标准, 使得开发变得容易 , 规范性更好
 - 在一个面向对象的系统中，系统的各种功能是由许许多多的不同对象协作完成的。在这种情况下，各个对象内部是如何实现自己的,对系统设计人员来讲就不那么重要了
-- 而各个对象之间的协作关系则成为系统设计的关键。小到不同类之间的通信，大到各模块之间的交互，在系统设计之初都是要着重考虑的，这也是系统设计的主要工作内容。面向接口编程就是指按
-  照这种思想来编程。
+- 而各个对象之间的协作关系则成为系统设计的关键。小到不同类之间的通信，大到各模块之间的交互，在系统设计之初都是要着重考虑的，这也是系统设计的主要工作内容。面向接口编程就是指按照这种思想来编程。
 
 
 
@@ -1075,7 +1073,7 @@ INSERT INTO `student` (`id`, `name`, `tid`) VALUES ('5', '小王', '1');
     <resultMap id="StudentTeacher" type="Student">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
-        <!--复杂的属性，我们需要单独去处理 对象：property 集合：collection-->
+        <!--复杂的属性，我们需要单独去处理 对象：association 集合：collection-->
         <association property="teacher" column="tid" javaType="Teacher" select="getTeacher"/>
     </resultMap>
 
@@ -1157,7 +1155,7 @@ public class Teacher {
     <result property="name" column="tname"/>
     <!--复杂的属性，我们需要单独去处理 对象：property 集合：collection
         javaTYpe="" 指定属性的类型！
-        集合中的泛型信息，我们使用odType获取
+        集合中的泛型信息，我们使用ofType获取
 
     -->
     <collection property="studentList" ofType="Student">
@@ -1493,7 +1491,7 @@ collection 表示集合的名字，item表示集合中的元素
 - 工作机制
   - 一个会话查询一条数据，这个数据就会被放在当前会话的一级缓存中;
   - 如果当前会话关闭了，这个会话对应的一级缓存就没了;但是我们想要的是，会话关闭了—级缓存中的数据被保存到二级缓存中;
-  - 新的会话查询信息，就可以从耳机缓存中获取内容；
+  - 新的会话查询信息，就可以从二级缓存中获取内容；
   - 不同的mapper查出的数据会放在自己对应的缓存(map)中。
 
 步骤：
@@ -1553,7 +1551,7 @@ collection 表示集合的名字，item表示集合中的元素
 
 注意
 
-​	当开启二级缓存时，要讲实体类进行序列化，不然会报错` java.io.NotSerializableException: com.xrl.pojo.User`
+​	当开启二级缓存时，要将实体类进行序列化，不然会报错` java.io.NotSerializableException: com.xrl.pojo.User`
 
 
 

@@ -476,7 +476,7 @@ Spring MVC的原理如下图所示:
     说明：
 
     - 实现接口Controller定义控制器是较老的办法
-    - 缺点是:一个俊制器中只有一个方法，如果要多个方法则需要定义多个Controller;定义的方式比较麻烦;
+    - 缺点是:一个控制器中只有一个方法，如果要多个方法则需要定义多个Controller;定义的方式比较麻烦;
 
 
 
@@ -609,7 +609,7 @@ public class HelloController implements Controller {
 
 2. 通过HttpServletResponse实现重定向
 
-3. 通过HttpServletResponse实现转发
+3. 通过HttpServletRequest实现转发
 
    ```java
    @controller
@@ -655,7 +655,7 @@ public class ModelTest1 {
     public String test2(Model model){
         // 转发
         model.addAttribute("msg","ModelTest1,重定向");
-        return "redirect:/WEB-INF/jsp/test.jsp";  // 只要没有加redirect前缀，都是转发
+        return "redirect:/index.jsp";  // 只要没有加redirect前缀，都是转发
 
     }
 }
@@ -855,7 +855,7 @@ public String test3(User user, Model model){
    </filter>
    <filter-mapping>
        <filter-name>encoding</filter-name>
-       <url-pattern>/</url-pattern>
+       <url-pattern>/*</url-pattern>
    </filter-mapping>
    ```
 
@@ -920,7 +920,7 @@ public String test3(User user, Model model){
 
   ```javascript
   var obj = {a: 'Hello ', b: 'world ' }; //这是一个对象，注意键名也是可以使用引号包裹的
-  var json = ' { "a ": "Hello","b":"world" ';//这是一个Json字符串，本质是一个字符串
+  var json = ' { "a ": "Hello","b":"world" }';//这是一个Json字符串，本质是一个字符串
   ```
 
 ### **JSON与JavaScript 对象互转**
@@ -2219,7 +2219,7 @@ public class LoginInterceptor implements HandlerInterceptor {
    ```xml
    <!-- 文件上传配置(死的)-->
    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-       <!--请求的编码格式，必须和sP的pageEncoding属性一致，以便正确读取表单的内容，默认为ISO-8859-1 -->
+       <!--请求的编码格式，必须和jsp的pageEncoding属性一致，以便正确读取表单的内容，默认为ISO-8859-1 -->
        <property name="defaultEncoding" value="utf-8"/>
        <!--上传文件大小上限，单位为字节(10485760=10M)-->
        <property name="maxUploadSize" value="10485760"/>
@@ -2373,4 +2373,8 @@ public class LoginInterceptor implements HandlerInterceptor {
        return "ok";
    }
    ```
+
+
+
+
 

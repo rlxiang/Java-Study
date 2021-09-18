@@ -194,7 +194,7 @@ public final Class getClass()
 - class：外部类，成员(成员内部类，静态内部类)，局部内部类，匿名内部类。
 - []: 数组
 - interface：接口
-- enum：美剧
+- enum：枚举
 - annotation：注解@interface
 - primitive type：基本数据类型
 - void

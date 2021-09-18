@@ -120,7 +120,7 @@ public class MyTest {
 public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
-    // 利用set进行东条实现UserDao实现类的注入
+    // 利用set进行动态实现UserDao实现类的注入
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }
@@ -375,7 +375,7 @@ IOC是一种编程思想，由主动的编程变成被动的接收．
 
     id: bean的唯一标识符，也就相当于new对象时的对象名
     class：bean 对象所对应的全限定名
-    name：也是别名,而且name 可以同时去多个别名
+    name：也是别名,而且name 可以同时取多个别名
 -->
 
 <bean id="usert" class="com.xrl.pojo.Usert" name="user2,u2">
@@ -671,7 +671,7 @@ xmlns:c="http://www.springframework.org/schema/c"
 ## 7、Bean的自动装配
 
 - 自动装配是Spring满足bean依赖的一种方式！
-- Spring会在上下文中自动虚招，并自动给bean装配属性！
+- Spring会在上下文中自动寻找，并自动给bean装配属性！
 
 
 
@@ -831,8 +831,8 @@ public class People {
 
 - 都是用来自动装配的，都可以放在属性字段上
 - @Autowired 默认通过byType的方式实现，而且必须要求这个对象存在！如果Autowired 不能进行唯一的自动装配时，则需要通过@Qualifier(value="指定装配的bean的id")来指定唯一自动装配的bean！【常用】
-- @Resource 默认通过byName的方式实现，如果找不到名字，则通过byName实现！如果两个都找不到就报错！【常用】
-- 执行顺序不同：@Autowired 通过byType的方式实现。@Resource 默认通过byName的方式实现
+- @Resource 默认通过byName的方式实现，如果找不到名字，则通过byType实现！如果两个都找不到就报错！【常用】
+- 执行顺序不同：@Autowired 首先通过byType的方式实现，当类型大于1时就byName实现。@Resource 默认通过byName的方式实现
 
 
 
@@ -881,7 +881,7 @@ public class People {
 
    - @Nullable ： 字段标记了这个注解，说明该字段可以为null
 
-   - @Resources：   自动装配通过名字，类型。如果找不到名字，则通过byName实现！如果两个都找不到就报错
+   - @Resources：   自动装配通过名字，类型。如果找不到名字，则通过byType实现！如果两个都找不到就报错
 
 5. 作用域(@Scope)
 
@@ -1126,7 +1126,7 @@ spring-study
 
 ​				 - demo02
 
-在实际的开发中，一般需要增加业务时(即附加操作)，是不会改变原有代码的，防止系统崩盘，于是就要进行横向操作代码完成附加的操作，即使用代理模式，这就是AOP的思想
+在实际的开发中，一般需要增加业务时(即附加操作)，是不会改变原有代码的，防止系统崩盘，于是就要进行横向操作代码完成附加的操作，即，使用代理模式，这就是AOP的思想
 
 ![image-20210706221911989](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706221911989.png)
 
@@ -1155,7 +1155,7 @@ spring-study
 - 公共业务就交给了代理角色！实现了业务的分工！
 - 公共业务发生扩展的时候，方便集中管理
 - 一个动态代理类代理的是一个接口，一般就是对应的一类业务
-- 一个动态代理可以代理多个类，因为代理对象变成动态的，所以再讲代理对象实现与真实角色相同的接口时，也可不用再去写静态代理那的将代理对象实现接口的代码了，只需要传入真实角色对象的信息即可生成实现了与真实角色相同接口的代理对象。
+- 一个动态代理可以代理多个类，因为代理对象变成动态的，所以在将代理对象实现与真实角色相同的接口时，也可不用再去写静态代理那的将代理对象实现接口的代码了，只需要传入真实角色对象的信息即可生成实现了与真实角色相同接口的代理对象。
 
 ```java
 // 真实角色与代理角色都要实现的接口
@@ -1262,7 +1262,7 @@ public class Client2 {
 
 ### 11.1、什么是AOP
 
-AOP (Aspect Oriented Programming)意为:面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。IAOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
+AOP (Aspect Oriented Programming)意为:面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
 ![image-20210707150429224](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210707150429224.png)
 
