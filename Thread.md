@@ -1,6 +1,6 @@
 ## Thread
 
-![image-20210729143444284](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729143444284.png)
+![image-20210729143444284](.\typora-user-images\image-20210729143444284.png)
 
 ### Process（进程）& Thread（线程）
 
@@ -169,13 +169,13 @@
      小结：
 
       	1. 继承Thread类：
-          - 子类继承Thread类具备多线程能力启动线程:
-          - 子类对象. start()
-          - 不建议使用:避免OOP单继承局限性
-     	2. 实现Runnable接口
-         - 实现接口Runnable具有多线程能力
-         - 启动线程:传入目标对象+Thread对象.start()
-         - 推荐使用:避免单继承局限性，灵活方便，方便同一个对象被多个线程使用
+      	 - 子类继承Thread类具备多线程能力启动线程:
+      	 - 子类对象. start()
+      	 - 不建议使用:避免OOP单继承局限性
+      	2. 实现Runnable接口
+      	- 实现接口Runnable具有多线程能力
+      	- 启动线程:传入目标对象+Thread对象.start()
+      	- 推荐使用:避免单继承局限性，灵活方便，方便同一个对象被多个线程使用
 
 - 实现Callable接口(了解)
 
@@ -345,13 +345,13 @@
 
 ### 线程的五大状态
 
-![image-20210730102156549](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730102156549.png)
+![image-20210730102156549](.\typora-user-images\image-20210730102156549.png)
 
 ![image-20210730102314789](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730102314789.png)
 
 #### 线程方法
 
-![image-20210730102443811](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730102443811.png)
+![image-20210730102443811](.\typora-user-images\image-20210730102443811.png)
 
 #### 停止线程
 
@@ -588,7 +588,7 @@
 总结 
 
 	1. 优先级的设定建议设置在start()调度前，值越大优先级越高
- 	2. 优先级低只是以为着获得调度的概率低，并不是优先级低就不会被调用了。这都是看CPU的调度
+	2. 优先级低只是以为着获得调度的概率低，并不是优先级低就不会被调用了。这都是看CPU的调度
 
 ```java
 package com.xrl.state;
@@ -708,7 +708,7 @@ class You implements Runnable{
 
   - 缺陷：若将一个大的方法申明为synchronized将会影响效率
 
-    ![image-20210730165301944](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730165301944.png)
+    ![image-20210730165301944](.\typora-user-images\image-20210730165301944.png)
 
 #### 同步代码块
 
@@ -885,7 +885,7 @@ class TestLock2 implements Runnable {
   - 假设仓库中只能存放一件产品，生产者将生产出来的产品放入仓库,消费者将仓库中产品取走消费.
   - 如果仓库中没有产品，则生产者将产品放入仓库﹐否则停止生产并等待，直到仓库中的产品被消费者取走为止.
   - 如果仓库中放有产品,则消费者可以将产品取走消费，否则停止消费并等待,直到仓库中再次放入产品为止.
-  - ![image-20210730194041653](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730194041653.png)
+  - ![image-20210730194041653](.\typora-user-images\image-20210730194041653.png)
 
 **这是一个线程同步问题，生产者和消费者共享同一个资源，并且生产者和消费者之间相互依赖，互为条件.**
 
@@ -900,7 +900,7 @@ class TestLock2 implements Runnable {
 
 - java提供了几个方法解决线程之间的通信问题
 
-  ![image-20210730194502346](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210730194502346.png)
+  ![image-20210730194502346](.\typora-user-images\image-20210730194502346.png)
 
   注意：**均是Object类的方法，都只能在同步方法或者同步代码块中使用,否则会抛出异常lllegalMonitorStateException**
 
@@ -1130,4 +1130,4 @@ class TV {
     - maximumPoolSize:最大线程数
     - keepAliveTime:线程没有任务时最多保持多长时间后会终止
 
-    ![image-20210731111738614](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210731111738614.png)
+    ![image-20210731111738614](.\typora-user-images\image-20210731111738614.png)

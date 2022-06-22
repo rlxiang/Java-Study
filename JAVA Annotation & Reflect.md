@@ -54,7 +54,7 @@
 
 - 加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象（一个类只有一个Class对象)，这个对象就包含了完整的类的结构信息。我们可以通过这个对象看到类的结构。这个对象就像一面镜子，透过这个镜子看到类的结构，所以，我们形象的称之为:反射
 
-![image-20210728152005783](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728152005783.png)
+![image-20210728152005783](.\typora-user-images\image-20210728152005783.png)
 
 ### java反射机制提供的功能
 
@@ -116,7 +116,7 @@ public final Class getClass()
 
 以上的方法返回值的类型是一个Class类，此类是Java反射的源头，实际上所谓反射从程序的运行结果来看也很好理解，即:可以通过对象反射求出类的名称。
 
-![image-20210728153919925](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728153919925.png)
+![image-20210728153919925](.\typora-user-images\image-20210728153919925.png)
 
 对象照镜子后可以得到的信息:某个类的属性、方法和构造器、某个类到底实现了哪些接口。对于每个类而言，JRE 都为其保留一个不变的Class类型的对象。一个Class对象包含了特定某个结构(classlinterfacelenumlannotation/primitive type/void/)的有关信息。
 
@@ -130,7 +130,7 @@ public final Class getClass()
 
 ### Class类中的常用方法
 
-![image-20210728154428461](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728154428461.png)
+![image-20210728154428461](.\typora-user-images\image-20210728154428461.png)
 
 
 
@@ -251,7 +251,7 @@ public class Test04 {
 
 当程序主动使用某个类时，如果该类还未被加载到内存中，则系统会通过如下三个步骤来对该类进行初始化。
 
-![image-20210728170521570](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728170521570.png)
+![image-20210728170521570](.\typora-user-images\image-20210728170521570.png)
 
 ### 类的加载与ClassLoader的理解
 
@@ -397,7 +397,7 @@ public class Test04 {
 
 - 类缓存:标准的JavaSE类加载器可以按要求查找类，但一旦某个类被加载到类加载器中，它将维持加载(缓存)一段时间。不过JVM垃圾回收机制可以回收这些Class对象
 
-  ![image-20210728200223263](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728200223263.png)
+  ![image-20210728200223263](.\typora-user-images\image-20210728200223263.png)
 
 类加载器作用是用来把类(class)装载进内存的。JVM规范定义了如下类型的类的加载器。
 
@@ -405,7 +405,7 @@ public class Test04 {
 - 扩展类加载器:负责jre/lib/ext目录下的jar包装入工作库
 - 系统类加载器:负责java -classpath所指的目录下的类与jar包装入工作，是最常用的加载器
 
-![image-20210728200358051](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728200358051.png)
+![image-20210728200358051](.\typora-user-images\image-20210728200358051.png)
 
 ```java
 package com.xrl.reflection;
@@ -569,7 +569,7 @@ public class Test08 {
 
 2. 之后使用Object invoke(Object obj, Object[] args)进行调用，并向方法中传递要设置的obj对象的参数信息。
 
-   ![image-20210728212842854](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728212842854.png)
+   ![image-20210728212842854](.\typora-user-images\image-20210728212842854.png)
 
 3. **Object invoke(Object obj, Object ... args)**
 
@@ -778,7 +778,7 @@ public class Test11 {
 
   - Object relationship Mapping -->对象关系映射
 
-    ![image-20210728220246265](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728220246265.png)
+    ![image-20210728220246265](.\typora-user-images\image-20210728220246265.png)
 
   - 类和表结构对应
 

@@ -1,4 +1,4 @@
-## springboot 自动配置原理
+##  springboot 自动配置原理
 
 **原理初探 **
 
@@ -82,7 +82,7 @@ protected List<String> getCandidateConfigurations(AnnotationMetadata metadata, A
 
 META-INF/spring.factories： 自动配置的核心文件
 
-![image-20210616132334310](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210616132334310.png)
+![image-20210616132334310](.\typora-user-images\image-20210616132334310.png)
 
 ```java
 Properties properties = PropertiesLoaderUtils.loadProperties(resource);
@@ -114,7 +114,7 @@ public class Dog {
 }
 ```
 
-![image-20210617171247649](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210617171247649.png)
+![image-20210617171247649](.\typora-user-images\image-20210617171247649.png)
 
 ### JSR303数据校验
 
@@ -132,7 +132,7 @@ public class Person {
 }
 ```
 
-![image-20210617172255564](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210617172255564.png)
+![image-20210617172255564](.\typora-user-images\image-20210617172255564.png)
 
 
 
@@ -1216,7 +1216,7 @@ public class ShiroConfig {
 
 5. 测试运行 http://localhost:8080/swagger-ui.html
 
-   ![image-20210725221935219](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210725221935219.png)
+   ![image-20210725221935219](.\typora-user-images\image-20210725221935219.png)
 
 
 
@@ -1268,7 +1268,7 @@ public class SwaggerConfig {
 
 测试结果（观察与之前的页面的区别）
 
-![image-20210725224155156](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210725224155156.png)
+![image-20210725224155156](.\typora-user-images\image-20210725224155156.png)
 
 ### Swagger配置扫描接口
 
@@ -1416,7 +1416,7 @@ public Docket getDocket3(){
 
 测试
 
-![image-20210726141309509](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210726141309509.png)
+![image-20210726141309509](.\typora-user-images\image-20210726141309509.png)
 
 
 
@@ -1728,7 +1728,7 @@ public class ScheduledService {
 
 测试 只要启动程序即可测试
 
-![image-20210726200858383](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210726200858383.png)
+![image-20210726200858383](.\typora-user-images\image-20210726200858383.png)
 
 ## 分布式 Dubbo + Zookeeper +SpringBoot
 
@@ -1752,7 +1752,7 @@ public class ScheduledService {
 
 在Dubbo的官网文档有这样一张图
 
-![image-20210726202418448](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210726202418448.png)
+![image-20210726202418448](.\typora-user-images\image-20210726202418448.png)
 
 
 
@@ -1764,7 +1764,7 @@ Apache Dubbo 是一款高性能、轻量级的开源Java RPC框架，它提供�
 
 ### dubbo 基本概念
 
-![image-20210726204634471](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210726204634471.png)
+![image-20210726204634471](.\typora-user-images\image-20210726204634471.png)
 
 **服务提供者（Provider)**:暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。
 

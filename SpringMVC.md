@@ -153,10 +153,10 @@
 
 1. 查看控制台输出，看一下是不是缺少什么jar包
 2. 如果jar包存在，实现无法输出，就在IDEA的项目发布中，添加lib依赖！这是因为在maven中的包没有上传到tomcat服务器中
-3. ![image-20210709105500136](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709105500136.png)
+3. ![image-20210709105500136](.\typora-user-images\image-20210709105500136.png)
 4. 重启 Tomcat 即可解决！
 
-![image-20210709105621484](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709105621484.png)
+![image-20210709105621484](.\typora-user-images\image-20210709105621484.png)
 
 
 
@@ -164,17 +164,17 @@
 
 ​	SpringMVC的web框架围绕DispatcherServlet设计的。DispatcherServlet的作用是将请求分发到不同的处理器(Controller)，**该框架以请求为驱动，围绕一个中心Servlet分派请求及提供其他功能。DispatcherServlet是一个实现的Servlet(它继承自HttpServlet基类)**
 
-![image-20210709142613908](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709142613908.png)
+![image-20210709142613908](.\typora-user-images\image-20210709142613908.png)
 
 Spring MVC的原理如下图所示:
 
 ​		当发起请求时被前置的控制器拦截到请求，根据请求参数生成代理请求，找到请求对应的实际控制器，控制器处理请求，创建数据模型，访问数据库，将模型响应给中心控制器，控制器使用模型与视图渲染视图结果，将结果返回给中心控制器，再将结果返回给请求者。
 
-![image-20210709142724169](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709142724169.png)
+![image-20210709142724169](.\typora-user-images\image-20210709142724169.png)
 
 ### SpringMVC执行原理
 
-![image-20210709142130139](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709142130139.png)
+![image-20210709142130139](.\typora-user-images\image-20210709142130139.png)
 
 上图为SpringMVC的一个较完整的流程图，实线表示SpringMVC框架提供的技术，不需要开发者实现，虚线表示需要开发者实现。
 
@@ -394,7 +394,7 @@ Spring MVC的原理如下图所示:
 
    配置Tomcat，开启服务器，访问对应的请求路径！
 
-![image-20210709163014817](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709163014817.png)
+![image-20210709163014817](.\typora-user-images\image-20210709163014817.png)
 
 
 
@@ -471,7 +471,7 @@ Spring MVC的原理如下图所示:
 
   - 测试
 
-    ![image-20210709171247855](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709171247855.png)
+    ![image-20210709171247855](.\typora-user-images\image-20210709171247855.png)
 
     说明：
 
@@ -508,7 +508,7 @@ Spring MVC的原理如下图所示:
 
 - 测试
 
-  ![image-20210709172338246](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709172338246.png)
+  ![image-20210709172338246](.\typora-user-images\image-20210709172338246.png)
 
 ### RestFul风格
 
@@ -719,7 +719,7 @@ public String test1(String name, Model model){
 
 结果
 
-![image-20210709222753242](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709222753242.png)
+![image-20210709222753242](.\typora-user-images\image-20210709222753242.png)
 
 ### 提交的域名称(请求地址的参数)和处理方法的参数名不一致时
 
@@ -740,7 +740,7 @@ public String test2(@RequestParam("username") String name, Model model){
 
 结果：
 
-![image-20210709223015971](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709223015971.png)
+![image-20210709223015971](.\typora-user-images\image-20210709223015971.png)
 
 
 
@@ -763,7 +763,7 @@ public String test3(User user, Model model){
 
 结果
 
-![image-20210709223459780](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210709223459780.png)
+![image-20210709223459780](.\typora-user-images\image-20210709223459780.png)
 
 注意：
 
@@ -821,7 +821,7 @@ public String test3(User user, Model model){
 
 3. 输入中文测试，发现乱码
 
-   ![image-20210712214930700](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210712214930700.png)
+   ![image-20210712214930700](.\typora-user-images\image-20210712214930700.png)
 
    以前乱码的问题我们通过过滤器解决
 
@@ -1685,7 +1685,7 @@ INSERT INTO books VALUES(1,'Java',1,'从入门到放弃'),(2,'MySQL',10,'从删�
 
 - 就和国内百度的搜索框一样
 
-  ![image-20210720205838118](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210720205838118.png)
+  ![image-20210720205838118](.\typora-user-images\image-20210720205838118.png)
 
 - 传统的网页(即不用ajax技术的网页)，想要更新内容或者提交一个表单，都需要重新加载整个网页。
 
@@ -1916,7 +1916,7 @@ INSERT INTO books VALUES(1,'Java',1,'从入门到放弃'),(2,'MySQL',10,'从删�
 
 4. 成功实现了数据回显！
 
-   ![image-20210721211153713](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210721211153713.png)
+   ![image-20210721211153713](.\typora-user-images\image-20210721211153713.png)
 
 ### 注册提示效果
 
@@ -2008,7 +2008,7 @@ public String a3(String name, String pwd) {
 
 **数据展示**（注意地址栏的地址没有改变）
 
-![image-20210721221935301](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210721221935301.png)
+![image-20210721221935301](.\typora-user-images\image-20210721221935301.png)
 
 
 
@@ -2317,7 +2317,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
 3. 测试成功
 
-   ![image-20210722170645723](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210722170645723.png)
+   ![image-20210722170645723](.\typora-user-images\image-20210722170645723.png)
 
 ![image-20210722170702587](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210722170702587.png)
 

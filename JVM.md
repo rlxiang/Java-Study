@@ -10,21 +10,21 @@
 
 ### JVM的位置
 
-![image-20210729095415919](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729095415919.png)
+![image-20210729095415919](.\typora-user-images\image-20210729095415919.png)
 
 ### JVM的体系结构
 
-![image-20210729100321518](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729100321518.png)
+![image-20210729100321518](.\typora-user-images\image-20210729100321518.png)
 
-![image-20210729100515921](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729100515921.png)
+![image-20210729100515921](.\typora-user-images\image-20210729100515921.png)
 
-![image-20210729100628364](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729100628364.png)
+![image-20210729100628364](.\typora-user-images\image-20210729100628364.png)
 
 ### 类加载器
 
 作用： 加载Class文件
 
-![image-20210729103542889](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729103542889.png)
+![image-20210729103542889](.\typora-user-images\image-20210729103542889.png)
 
 1. 虚拟机自带的加载器
 2. 启动类(根)加载器
@@ -47,19 +47,19 @@
 
 ​	在Java中将执行程序分成本地代码和远程代码两种，本地代码默认视为可信任的，而远程代码则被看作是不受信的。对于授信的本地代码，可以访问一切本地资源。而对于非授信的远程代码在早期的ava实现中，安全依赖于沙箱(Sandbox)机制。如下图所示JDK1.0安全模型
 
-![image-20210729135158515](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729135158515.png)
+![image-20210729135158515](.\typora-user-images\image-20210729135158515.png)
 
 ​	但如此严格的安全机制也给程序的功能扩展带来障碍，比如当用户希望远程代码访问本地系统的文件时候，就无法实现。因此在后续的Java1.1版本中，针对安全机制做了改进，增加了安全策略，允许用户指定代码对本地资源的访问权限。如下图所示JDK1.1`安全模型`
 
-![image-20210729135508496](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729135508496.png)
+![image-20210729135508496](.\typora-user-images\image-20210729135508496.png)
 
 ​	在Java1.2版本中，再次改进了安全机制，增加了代码签名。不论本地代码或是远程代码，都会按照用户的安全策略设定，由类加载器加载到虚拟机中权限不同的运行空间，来实现差异化的代码执行权限控制。如下图所示JDK1.2安全模型
 
-![image-20210729135615299](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729135615299.png)
+![image-20210729135615299](.\typora-user-images\image-20210729135615299.png)
 
 ​	当前最新的安全机制实现，则引入了域(Domain)的概念。虚拟机会把所有代码加载到不同的系统域和应用域，系统域部分专门负责与关键资源进行交互，而各个应用域部分则通过系统域的部分代理来对各种需要的资源进行访问。虚拟机中不同的受保护域(Protected Domain)，对应不一样的权限(Permission)。存在于不同域中的类文件就具有了当前域的全部权限，如下图所示最新的安全模型(jdk 1.6)
 
-![image-20210729135756635](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210729135756635.png)
+![image-20210729135756635](.\typora-user-images\image-20210729135756635.png)
 
 组成沙箱的基本组件：
 
@@ -123,7 +123,7 @@ Method Area 方法区
 
 栈 + 堆 + 方法区：交互关系
 
-![image-20210731165652337](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210731165652337.png)
+![image-20210731165652337](.\typora-user-images\image-20210731165652337.png)
 
 ### 三种JVM
 
@@ -145,7 +145,7 @@ Heap，一个JVM只有一个堆内存，堆内存的大小是可以调节的。
 - 养老区 old
 - 永久区 Perm
 
-![image-20210731215712307](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210731215712307.png)
+![image-20210731215712307](.\typora-user-images\image-20210731215712307.png)
 
 GC 垃圾回收，主要是在伊甸园区和养老区~
 
@@ -153,7 +153,7 @@ GC 垃圾回收，主要是在伊甸园区和养老区~
 
 在JDK8以后，永久存储区改了个名字叫元空间
 
-![image-20210731221215099](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210731221215099.png)
+![image-20210731221215099](.\typora-user-images\image-20210731221215099.png)
 
 #### 新生区
 
@@ -178,7 +178,7 @@ GC 垃圾回收，主要是在伊甸园区和养老区~
 - jdk1.7：也有永久代，但是慢慢的退化了，提出了`去永久代`，这时候的常量池在堆中
 - jdk1.8之后：无永久代，常量池在元空间
 
-![image-20210801152005007](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801152005007.png)
+![image-20210801152005007](.\typora-user-images\image-20210801152005007.png)
 
 元空间，逻辑上是存在的，但是在物理上是不存在的
 
@@ -233,7 +233,7 @@ public class Demo02 {
 
 ### Gc 垃圾回收
 
-![image-20210801170125697](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801170125697.png)
+![image-20210801170125697](.\typora-user-images\image-20210801170125697.png)
 
 JVM在进行垃圾回收时，并不是对着三个区域同一回收。大部分时候，回收都是新生代~
 
@@ -250,15 +250,15 @@ GC两种类型：轻GC（普通GC，一般在新生代(经常)和幸存区处理
 
 #### 引用计数法（为每个对象的调用都设置一个计数器，没有被调用的就清除出去，并不高效，用的不多）
 
-![image-20210801171426453](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801171426453.png)
+![image-20210801171426453](.\typora-user-images\image-20210801171426453.png)
 
 #### 复制算法
 
 新生区主要用的是复制算法，在进行GC时，会将Eden区存活的对象转移到to区，也就是往空的幸存区去存，此时如果from也有数据，也会被转移（复制）到to区，转移完成后，原来的to区就变成from区，原来的from区就变成了to区，再次GC时，又会将eden区域中的数据放在to区，from区的资源放在to区，然后to区与from区互换。赋值算法就是将to区与from区的数据进行转移和将这两个区域的身份进行互换。
 
-![image-20210801202005110](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801202005110.png)
+![image-20210801202005110](.\typora-user-images\image-20210801202005110.png)
 
-绿色区域表示存活的对象![image-20210801202537400](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801202537400.png)
+绿色区域表示存活的对象![image-20210801202537400](.\typora-user-images\image-20210801202537400.png)
 
 - 好处：没有内存的碎片~
 - 缺点：浪费了另一个内存空间，即to空间，这一空间永久是空的。假设对象100%存活，则会将from区的数据全部复制到to区，成本会很高。想要复制算法最佳使用，则就要对象存活度较低，所以复制算法主要运行在新生区。
@@ -267,7 +267,7 @@ GC两种类型：轻GC（普通GC，一般在新生代(经常)和幸存区处理
 
 标记清除算法：在GC时会扫描存活的对象，并给这些存活的对象带上标记，然后在清除的时候(此时还会在扫描一次)会将没有被标记的对象清除出去，当堆中的有效内存全部被标记了，就会停止程序，这是GC就会爆炸
 
-![image-20210801203736212](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801203736212.png)
+![image-20210801203736212](.\typora-user-images\image-20210801203736212.png)
 
 缺点：两次扫描严重浪费时间，会产生内存碎片
 
@@ -279,15 +279,15 @@ GC两种类型：轻GC（普通GC，一般在新生代(经常)和幸存区处理
 
 标记压缩是在标记清除的基础上再次扫描空间，对标记的空间和没有标记的空间进行排序，此时就会将所有没有标记的空间连接起来，连接起来的空间就不是内存碎片了，但是多了空间移动的成本
 
-![image-20210801204613995](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801204613995.png)
+![image-20210801204613995](.\typora-user-images\image-20210801204613995.png)
 
 #### 标记清除压缩
 
 先标记清除几次，再进行压缩
 
-![image-20210801210150815](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801210150815.png)
+![image-20210801210150815](.\typora-user-images\image-20210801210150815.png)
 
-![image-20210801210235646](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801210235646.png)
+![image-20210801210235646](.\typora-user-images\image-20210801210235646.png)
 
 ### 总结
 
@@ -325,7 +325,7 @@ GC两种类型：轻GC（普通GC，一般在新生代(经常)和幸存区处理
 
    JMM定义了线程工作内存和主内存之间的抽象关系:线程之间的共享变量存储在主内存(Main Memory)中，每个线程都有一个私有的本地内存(Local Memory)
 
-   ![image-20210801212438017](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210801212438017.png)
+   ![image-20210801212438017](.\typora-user-images\image-20210801212438017.png)
 
    解决共享对象可见性这个问题: volilate
 

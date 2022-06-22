@@ -412,7 +412,7 @@ Mybatis默认的事务管理器就是JDBC(MANAGED一般不会使用)，连接池
 
 这些属性可以在外部进行配置，并可以进行动态替换。你既可以在典型的 Java 属性文件中配置这些属性，也可以在 properties 元素的子元素中设置。【db.properties】
 
-![image-20210701221220261](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210701221220261.png)
+![image-20210701221220261](.\typora-user-images\image-20210701221220261.png)
 
 编写一个配置文件
 
@@ -480,7 +480,7 @@ public class User {
 
 这是 MyBatis 中极为重要的调整设置，它们会改变 MyBatis 的运行时行为。 下表描述了设置中各项设置的含义、默认值等。
 
-![image-20210702101022904](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702101022904.png)
+![image-20210702101022904](.\typora-user-images\image-20210702101022904.png)
 
 ![image-20210702101058639](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702101058639.png)
 
@@ -559,7 +559,7 @@ MapperRegistry：注册绑定我们的Mapper文件
 - 每个线程都应该有它自己的 SqlSession 实例。SqlSession 的实例不是线程安全的，因此是不能被共享的，所以它的最佳的作用域是请求或方法作用域。
 - 用完之后需要赶紧关闭。否则资源被占用
 
-![image-20210702104628466](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702104628466.png)
+![image-20210702104628466](.\typora-user-images\image-20210702104628466.png)
 
 这里面的每一个Mapper，就代表一个具体的业务！
 
@@ -569,7 +569,7 @@ MapperRegistry：注册绑定我们的Mapper文件
 
 数据库中的字段
 
-![image-20210702105233394](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702105233394.png)
+![image-20210702105233394](.\typora-user-images\image-20210702105233394.png)
 
 实体类中的属性名
 
@@ -584,7 +584,7 @@ public class User {
 
 测试结果
 
-![image-20210702105932042](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702105932042.png)
+![image-20210702105932042](.\typora-user-images\image-20210702105932042.png)
 
 
 
@@ -624,7 +624,7 @@ id name password -- 实体类属性名
 </mapper>
 ```
 
-![image-20210702111230333](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702111230333.png)
+![image-20210702111230333](.\typora-user-images\image-20210702111230333.png)
 
 - `resultMap` 元素是 MyBatis 中最重要最强大的元素。
 
@@ -651,7 +651,7 @@ id name password -- 实体类属性名
 
 现在：使用日志工厂
 
-![image-20210702152605915](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210702152605915.png)
+![image-20210702152605915](.\typora-user-images\image-20210702152605915.png)
 
 - SLF4J 
 -  LOG4J 【掌握】
@@ -675,7 +675,7 @@ id name password -- 实体类属性名
 
 测试，可以看到控制台有大量的输出！我们可以通过这些输出来判断程序到底哪里出了Bug
 
-![image-20210703125150757](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210703125150757.png)
+![image-20210703125150757](.\typora-user-images\image-20210703125150757.png)
 
 #### Log4j
 
@@ -751,7 +751,7 @@ id name password -- 实体类属性名
    - 使用Log4j 输出日志
    - 可以看到还生成了一个日志的文件 【需要修改file的日志级别】
 
-   ![image-20210703125630338](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210703125630338.png)
+   ![image-20210703125630338](.\typora-user-images\image-20210703125630338.png)
 
 #### limit实现分页
 
@@ -851,7 +851,7 @@ SELECT * FROM table LIMIT 5; //检索前 5 个记录行
 
    #### 分页插件
 
-   ![image-20210703132406439](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210703132406439.png)
+   ![image-20210703132406439](.\typora-user-images\image-20210703132406439.png)
 
 了解即可，会用就行。
 
@@ -1024,7 +1024,7 @@ public class UserMapperTest {
 
 ### 多对一
 
-![image-20210703165328162](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210703165328162.png)
+![image-20210703165328162](.\typora-user-images\image-20210703165328162.png)
 
 ```sql
 CREATE TABLE `teacher` (
@@ -1447,7 +1447,7 @@ collection 表示集合的名字，item表示集合中的元素
 
 3. 查看日志输出
 
-4. ![image-20210704220755356](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210704220755356.png)
+4. ![image-20210704220755356](.\typora-user-images\image-20210704220755356.png)
 
 缓存失效的情况：
 
@@ -1455,7 +1455,7 @@ collection 表示集合的名字，item表示集合中的元素
 
 2. 增删改操作，可能会改变原来的数据，所以缓存必定会刷新
 
-   ![image-20210704221608341](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210704221608341.png)
+   ![image-20210704221608341](.\typora-user-images\image-20210704221608341.png)
 
 3. 查询不同的Mapper.xml
 
@@ -1547,7 +1547,7 @@ collection 表示集合的名字，item表示集合中的元素
    sqlSession2.close();// 关闭另一个SqlSession
    ```
 
-   ![image-20210705094405620](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210705094405620.png)
+   ![image-20210705094405620](.\typora-user-images\image-20210705094405620.png)
 
 注意
 
@@ -1563,7 +1563,7 @@ collection 表示集合的名字，item表示集合中的元素
 
 #### 13.5、缓存原理
 
-![image-20210705101040558](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210705101040558.png)
+![image-20210705101040558](.\typora-user-images\image-20210705101040558.png)
 
 缓存顺序
 

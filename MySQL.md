@@ -171,7 +171,7 @@ MYISAM -- 早些年使用
 常规操作：
 
 - MYISAM 节约空间，速度较快
-- INNODB 安全性搞，支持事务的处理，支持外键可以多表多用户操作
+- INNODB 安全性高，支持事务的处理，支持外键可以多表多用户操作
 
 
 
@@ -485,7 +485,7 @@ SELECT
 作用：去除select查询出来的结果中重复的数据，重复的数据只显示一个
 
 ```sql
-SELECT DISTINCT `studentno` FROM `student`  -- 取出重复的数据  distinct
+SELECT DISTINCT `studentno` FROM `student`  -- 去除重复的数据  distinct
 ```
 
 
@@ -566,7 +566,7 @@ WHERE `borndate` IS  NULL
 
 >连表查询的关键词是  JOIN
 
-![image-20210809161725579](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210809161725579.png)
+![image-20210809161725579](.\typora-user-images\image-20210809161725579.png)
 
 ![image-20210809162036277](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210809162036277.png)
 
@@ -1084,11 +1084,11 @@ EXPLAIN SELECT * FROM `app_user` WHERE `name`='用户99999'
 
 添加索引后搜索的行数
 
-![image-20210811173151980](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811173151980.png)
+![image-20210811173151980](.\typora-user-images\image-20210811173151980.png)
 
 没有添加索引搜索的行数
 
-![image-20210811173304805](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811173304805.png)
+![image-20210811173304805](.\typora-user-images\image-20210811173304805.png)
 
 ==索引在小数据量的时候，用处不大，但是在大数据的时候，区别非常明显==
 
@@ -1117,7 +1117,7 @@ Btree：Innodb的默认数据结构
 
 >sql yog 可视化管理
 
-![image-20210811202759984](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811202759984.png)
+![image-20210811202759984](.\typora-user-images\image-20210811202759984.png)
 
 >SQL 命令操作
 
@@ -1170,7 +1170,7 @@ MySQL数据库备份的方式
 
   - 在想要导出的表或者库中，右键，选择备份或导出
 
-    ![image-20210811205420319](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811205420319.png)
+    ![image-20210811205420319](.\typora-user-images\image-20210811205420319.png)
 
 - 使用命令行导出 mysqldump  命令行使用
 
@@ -1236,7 +1236,7 @@ MySQL数据库备份的方式
 
 每种类型的数据库都有其对应的数据库驱动
 
-![image-20210811212042070](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811212042070.png)
+![image-20210811212042070](.\typora-user-images\image-20210811212042070.png)
 
 
 
@@ -1246,9 +1246,9 @@ SUN 公司为了简化开发人员的操作（对数据库的统一操作），�
 
 这些规范的实现由具体的厂商实现，对开发人员来说，我们只需要掌握JDBC接口的操作即可
 
-![image-20210811212437054](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811212437054.png)
+![image-20210811212437054](.\typora-user-images\image-20210811212437054.png)
 
-![image-20210811213726004](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210811213726004.png)
+![image-20210811213726004](.\typora-user-images\image-20210811213726004.png)
 
 ### sql注入
 

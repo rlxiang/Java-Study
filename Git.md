@@ -21,7 +21,7 @@
 
 无论是工作还是学习，或者是自己做笔记，都经历过这样一个阶段!我们就迫切需要一个版本控制工具！
 
-![image-20210727165756192](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727165756192.png)
+![image-20210727165756192](.\typora-user-images\image-20210727165756192.png)
 
 多人开发就必须要使用 版本控制，否则代价会比较大！
 
@@ -44,13 +44,13 @@
 
    记录文件每次的更新，可以对每个版本做一个快照，或是记录补丁文件，适合个人用，如RCS。
 
-   ![image-20210727170335696](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727170335696.png)
+   ![image-20210727170335696](.\typora-user-images\image-20210727170335696.png)
 
 2. **集中版本控制**
 
    所有的版本数据都保存在服务器上，协同开发者从服务器上同步更新或者上传自己的修改
 
-   ![image-20210727170637929](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727170637929.png)
+   ![image-20210727170637929](.\typora-user-images\image-20210727170637929.png)
 
    所有的版本数据都存在服务器上，用户的本地只有自己以前所同步的版本，如果不连网的话，用户就看不到历史版本，也无法切换版本验证问题，或在不同分支工作。而且，所有数据都保存在单一的服务器上，有很大的风险这个服务器会损坏，这样就会丢失所有的数据，当然可以定期备份。代表产品:SVN、CVS、VSS
 
@@ -62,7 +62,7 @@
 
    不会因为服务器损坏或者网络问题，造成不能工作的情况！
 
-   ![image-20210727171011030](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727171011030.png)
+   ![image-20210727171011030](.\typora-user-images\image-20210727171011030.png)
 
 **Git 与 SVN 的区别**
 
@@ -108,7 +108,7 @@ Git 镜像地址 http://npm.taobao.org/mirrors/git-for-windows/
 
 安装成功后在开始菜单中会有Git项，菜单下有3个程序，任意文件夹下右键也可以看到对应的程序！
 
-![image-20210727194427094](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727194427094.png)
+![image-20210727194427094](.\typora-user-images\image-20210727194427094.png)
 
 **Git GUI**：图形界面的Git，不建议初学者使用，尽量先熟悉常用命令
 
@@ -138,7 +138,7 @@ Git 镜像地址 http://npm.taobao.org/mirrors/git-for-windows/
 
 查看配置  **git config -l**
 
-![image-20210727200611641](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727200611641.png)
+![image-20210727200611641](.\typora-user-images\image-20210727200611641.png)
 
 查看不同级别的配置文件：
 
@@ -153,21 +153,22 @@ git config --global --list
 
 1）Git\etc\gitconfig ： Git 安装目录下的 gitconfig --system 系统级
 
-![image-20210727201522067](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727201522067.png)
+![image-20210727201522067](.\typora-user-images\image-20210727201522067.png)
 
 2）C:\Users\Administrator\ .gitconfig 只适用于当前登录用户的配置 --global 全局(没有设置的时候里面什么都没有，如果没有该文件，就自己建立一个就行)
 
-![image-20210727201949062](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727201949062.png)
+![image-20210727201949062](.\typora-user-images\image-20210727201949062.png)
 
 这里可以直接编辑配置文件，通过命令设置后会响应到这里。
 
 >==设置用户名与邮箱(用户标识，必须要配置)==
 
-当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远的嵌入到了你的提交中:
+当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。但是这里的信息是可以自己乱写的。主要作为标识使用。它被永远的嵌入到了你的提交中:
 
 ```bash
 git config --global user.name "rlxiang" #名称
 git config --global user.email 594663327@qq.com #邮箱
+git config --list  查看配置信息
 ```
 
 只需要做一次这个设置，如果你传递了--global选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要--global选项。总之--global为全局配置，不加为某个项目的特定配置。
@@ -178,7 +179,7 @@ git config --global user.email 594663327@qq.com #邮箱
 
 Git本地有三个工作区域:工作目录(Working Directory )、暂存区(Stage/Index)、资源库(Repository或cit Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下︰
 
-![image-20210727202717540](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727202717540.png)
+![image-20210727202717540](.\typora-user-images\image-20210727202717540.png)
 
 - Workspace :工作区，就是你平时存放项目代码的地方
 - Repository :仓库区（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中HEAD指向最新放入仓库的版本
@@ -186,7 +187,7 @@ Git本地有三个工作区域:工作目录(Working Directory )、暂存区(Stag
 
 本地的三个区域确切的说应该是git仓库中HEAD指向的版本:
 
-![image-20210727203419784](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727203419784.png)
+![image-20210727203419784](.\typora-user-images\image-20210727203419784.png)
 
 - Directory:使用Git管理的一个目录，也就是一个仓库，包含我们的工作空间和Git的管理空间。
 - WorkSpace:需要通过Git进行版本控制的目录和文件，这些目录和文件组成了工作空间。
@@ -205,7 +206,7 @@ git的工作流程一般是这样的：
 
 因此，git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)
 
-![image-20210727203849682](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727203849682.png)
+![image-20210727203849682](.\typora-user-images\image-20210727203849682.png)
 
 ### Git项目搭建
 
@@ -216,22 +217,22 @@ git的工作流程一般是这样的：
 
 日常使用只要记住下图6个命令：
 
-![image-20210727203949558](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727203949558.png)
+![image-20210727203949558](.\typora-user-images\image-20210727203949558.png)
 
 >本地仓库搭建
 
 创建本地仓库的方法有两种：一种是创建全新的仓库，另一种是克隆远程仓库。
 
-1. 创建全新的仓库，需要用GIT管理的项目的根目录执行：
+1. 创建全新的仓库，需要用GIT管理的项目的根目录(工作目录)执行：
 
    ```bash
    // 在当前目录新建一个Git仓库
    git init
    ```
 
-2. 执行后可以看到，仅仅在项目目录多出了一个.git目录，关于版本等的所有信息都在这个目录里面。
+2. 执行后可以看到，仅仅在项目目录多出了一个.git目录(版本库)，关于版本等的所有信息都在这个目录里面。
 
-   ![image-20210727204423585](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727204423585.png)
+   ![image-20210727204423585](.\typora-user-images\image-20210727204423585.png)
 
 >克隆远程仓库
 
@@ -269,10 +270,93 @@ git status [filename]
 git status
 
 
-# git add .      添加所有文件到暂存区
-# git commit -m "消息内容" 提交暂存区中的内容到本地仓库 -m表示提交信息
+# git 本地仓库常用命令
+ git add .      添加所有文件到暂存区
+ git add [filename] 添加指定文件到暂存区
+ git commit -m "消息内容" filename 提交暂存区中的内容到本地仓库 -m表示提交信息
+ git reset [filename] 将暂存区的文件取消暂存或者是切换到指定版本
+ git reset --hard 日志版本(一串序列号)   执行即可回到对应的版本
+ git log  查看日志
+```
+
+![image-20220503163219517](.\typora-user-images\image-20220503163219517.png)
+
+
+
+```bash
+# git 远程仓库常用命令
+git remote [-v]      查看远程仓库
+git remote add [shortname] [url] 添加远程仓库,就是将本地仓库与远程仓库关联起来实施通信。该命令必须要先存在远程仓库才能执行。shortname一般指定为origin
+
+git clone       从远程仓库克隆
+git pull [short-name] [branch-name]        从远程仓库拉取
+注意：如果当前本地仓库不是从远程仓库中克隆过来的，而是本地创建的仓库，并且仓库中存在文件，此时再从远程拉取文件的时候会报错(fatal: refusing to merge unrelated histories)
+解决此问题可以在git pull命令后加入参数 --allow-unrelated-histories
+
+git push [remote-name] [branch-name]       推送到远程仓库
+```
+
+
+
+### git 分支
+
+分支是Git 使用过程中非常重要的概念。使用分支意味着你可以把你的工作从开发主线上分离开来，以免影响开发主线。
+
+同一个仓库可以有多个分支，各个分支相互独立，互不干扰。
+
+通过git init 命令创建本地仓库时默认会创建一个master分支
+
+```bash
+关于分支的相关命令，具体如下：
+ git branch			            查看分支
+ git branch [name]		        创建分支
+ git checkout [name]		    切换分支
+ git push [shortName] [name]	推送至远程仓库分支
+ git merge [name]		        合并分支
+##################################################
+git branch	列出所有本地分支
+git branch -r	列出所有远程分支
+git branch -a	列出所有本地分支和远程分支
+
+git branch [name] :在本地创建分支命令
+git checkout [name] ：切换本地分支命令
+git push [shortName] [name] ：将本地分支推送至远程仓库分支命令
+git merge [name]          ：合并分支命令，合并后只存在于本地，若要在远程仓库中存在还需要push
+###############################################
+分支合并出现异常的情况： 在不同的分支里修改同一文件后，再进行合并可能会报错，需要先解决冲突，在合并。解决方法如下：
+
+首先将合并的文件中不需要的信息删掉，然后使用 git add 合并的文件名（b1.txt）， 这一操作就是告诉git，冲突已经解决了，
+然后再提交 git commit -m "..." b1.txt, 如果这一步报错：fatal：cannot do a partial commit during merge,
+则可以在提交时加入 -i 参数，git commit -m "..." b1.txt -i. 然后再重新推送该文件即可(b1.txt)
+```
+
+
+
+### 标签操作
+
+Git 中的标签，指的是某个分支某个特定时间点的状态。通过标签，可以很方便的切换到标记时的状态。
+
+比较有代表性的是人们会使用这个功能来标记发布结点（v1.0 、v1.2等）。下面是mybatis-plus的标签：
+
+![image-20220503205919851](.\typora-user-images\image-20220503205919851.png)
+
+
+
+>git 标签常用命令
+
+```bash
+git tag			列出已有的标签
+git tag [tagName]			创建标签
+git push [shortName] [tagName]	将标签推送至远程仓库
+git checkout -b [branch] [tagName]	检出标签, 即可以将当时这个标签的状态下载下来，就能拿到当时标签状态下的代码.检出标签时需要新建一个分支来指向某个标签
 
 ```
+
+
+
+
+
+
 
 
 
@@ -352,7 +436,7 @@ tmp/
    ssh-keygen
    ```
 
-   ![image-20210727221652337](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727221652337.png)
+   ![image-20210727221652337](.\typora-user-images\image-20210727221652337.png)
 
 3. 将公钥信息public key添加到码云账户中即可!
 
@@ -360,7 +444,7 @@ tmp/
 
 4. 使用码云创建一个自己的仓库!
 
-   ![image-20210727222620096](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210727222620096.png)
+   ![image-20210727222620096](.\typora-user-images\image-20210727222620096.png)
 
    ​	然后把这个仓库给克隆下来就能用了
 
@@ -371,9 +455,9 @@ tmp/
 1. 新建项目，绑定Git
 
    - 将我们远程的git文件目录拷贝到项目中即可！
-   - ![image-20210728104053472](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728104053472.png)
+   - ![image-20210728104053472](.\typora-user-images\image-20210728104053472.png)
    - 注意观察idea中的变化
-   - ![image-20210728104341892](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728104341892.png)
+   - ![image-20210728104341892](.\typora-user-images\image-20210728104341892.png)
 
 2. 修改文件，使用IDEA操作Git
 
@@ -383,7 +467,7 @@ tmp/
 
 3. 提交测试
 
-   ![image-20210728110617834](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728110617834.png)
+   ![image-20210728110617834](.\typora-user-images\image-20210728110617834.png)
 
 这些都是单人操作
 
@@ -393,9 +477,9 @@ tmp/
 
 分支在GIT中相对较难，分支就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，我们就需要处理一些问题了!
 
-![image-20210728111102573](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728111102573.png)
+![image-20210728111102573](.\typora-user-images\image-20210728111102573.png)
 
-![image-20210728110730052](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728110730052.png)
+![image-20210728110730052](.\typora-user-images\image-20210728110730052.png)
 
 git 分支中常用的命令
 
@@ -431,4 +515,21 @@ git branch -dr [remote/branch]
 
 master主分支应该非常稳定，用来发布新版本，一般情况下不允许在上面工作，工作一般情况下在新建的dev分支上工作，工作完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。
 
-![image-20210728112534297](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210728112534297.png)
+![image-20210728112534297](.\typora-user-images\image-20210728112534297.png)
+
+
+
+### 在idea中操作git分支
+
+- 查看分支
+
+- 创建分支
+
+![image-20220505213816171](.\typora-user-images\image-20220505213816171.png)
+
+- 切换分支
+- 将分支推送到远程仓库
+- 合并分支
+
+
+

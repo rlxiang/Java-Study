@@ -2,15 +2,15 @@
 
 ## 1、什么是JUC
 
-![image-20210807221206448](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210807221206448.png)
+![image-20210807221206448](.\typora-user-images\image-20210807221206448.png)
 
 **有些真实的业务如果只用普通的线程代码(Thread)去执行效率不高**
 
 **Runnable** 没有返回值、效率相比callable 相对低下
 
-![image-20210807221533392](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210807221533392.png)
+![image-20210807221533392](.\typora-user-images\image-20210807221533392.png)
 
-![image-20210807221725344](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210807221725344.png)
+![image-20210807221725344](.\typora-user-images\image-20210807221725344.png)
 
 
 
@@ -197,7 +197,7 @@ class Ticket {
 
 ![image-20210808105419197](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210808105419197.png)
 
-![image-20210808105716680](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210808105716680.png)
+![image-20210808105716680](.\typora-user-images\image-20210808105716680.png)
 
 公平锁：十分公平，讲究先来后到
 
@@ -349,7 +349,7 @@ class Data { // 数字 资源类
 
 上面的这个版本，如果再加几个线程就会产生问题,虚假唤醒
 
-![image-20210808135510694](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210808135510694.png)
+![image-20210808135510694](.\typora-user-images\image-20210808135510694.png)
 
 **将 if 判断改为 while 判断就可以了**
 
@@ -442,9 +442,9 @@ class Data { // 数字 资源类
 
 通过Lock找到Condition
 
-![image-20210808142939467](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210808142939467.png)
+![image-20210808142939467](.\typora-user-images\image-20210808142939467.png)
 
-![image-20210808143118190](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210808143118190.png)
+![image-20210808143118190](.\typora-user-images\image-20210808143118190.png)
 
 代码实现：
 
@@ -988,7 +988,7 @@ public class MapTest {
 
 ## 7、Callable
 
-![image-20210812150323441](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812150323441.png)
+![image-20210812150323441](.\typora-user-images\image-20210812150323441.png)
 
 1、可以有返回值
 
@@ -1000,15 +1000,15 @@ public class MapTest {
 
 
 
-![image-20210812151206915](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812151206915.png)
+![image-20210812151206915](.\typora-user-images\image-20210812151206915.png)
 
 
 
-![image-20210812151123626](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812151123626.png)
+![image-20210812151123626](.\typora-user-images\image-20210812151123626.png)
 
-![image-20210812151346525](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812151346525.png)
+![image-20210812151346525](.\typora-user-images\image-20210812151346525.png)
 
-![image-20210812152552883](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812152552883.png)
+![image-20210812152552883](.\typora-user-images\image-20210812152552883.png)
 
 
 
@@ -1061,7 +1061,7 @@ class MyThread implements Callable<Integer>{
 
 ### 8.1、CountDownLatch（线程减法计数器）
 
-![image-20210812153725030](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812153725030.png)
+![image-20210812153725030](.\typora-user-images\image-20210812153725030.png)
 
 ```java
 package com.xiang.add;
@@ -1097,7 +1097,7 @@ public class CountDownLatchDemo {
 
 ### 8.2、CyclicBarrier（线程加法计数器）
 
-![image-20210812155341637](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812155341637.png)
+![image-20210812155341637](.\typora-user-images\image-20210812155341637.png)
 
 加法计数器
 
@@ -1140,7 +1140,7 @@ public class CyclicBarrierDemo {
 
 Semaphore：信号量
 
-![image-20210812160318493](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812160318493.png)
+![image-20210812160318493](.\typora-user-images\image-20210812160318493.png)
 
 
 
@@ -1191,7 +1191,7 @@ public class SemaphoreDemo {
 
 **ReadWriteLock**
 
-![image-20210812163907042](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812163907042.png)
+![image-20210812163907042](.\typora-user-images\image-20210812163907042.png)
 
 
 
@@ -1296,21 +1296,21 @@ class MyCache {
 
 ## 10、阻塞队列
 
-![image-20210812170841068](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812170841068.png)
+![image-20210812170841068](.\typora-user-images\image-20210812170841068.png)
 
 
 
 阻塞队列
 
-![image-20210812171009608](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812171009608.png)
+![image-20210812171009608](.\typora-user-images\image-20210812171009608.png)
 
 
 
 **BlockingQueue**  阻塞队列
 
-![image-20210812173526294](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812173526294.png)
+![image-20210812173526294](.\typora-user-images\image-20210812173526294.png)
 
-![image-20210812173709847](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812173709847.png)
+![image-20210812173709847](.\typora-user-images\image-20210812173709847.png)
 
 什么时候用阻塞队列：多线程并发处理，线程池
 
@@ -1500,7 +1500,7 @@ public class SynchronousQueueDemo {
 
 >线程池：三大方法
 
-![image-20210812204031141](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812204031141.png)
+![image-20210812204031141](.\typora-user-images\image-20210812204031141.png)
 
 
 
@@ -1586,7 +1586,7 @@ public ThreadPoolExecutor(int corePoolSize, // 核心线程池大小
 
 
 
-![image-20210812210045284](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812210045284.png)
+![image-20210812210045284](.\typora-user-images\image-20210812210045284.png)
 
 比如在银行办理业务，虽然有5个窗口，但是最开始这五个窗口不是一直开的，只有1,2号窗口常开(这个就是核心线程池的大小)，当1,2号窗口有人时，此时又有人来办理业务，这些人就会去候客区等待（就是阻塞队列），普通情况下当1,2号窗口的人办理完业务后，候客区的人再过去1,2号窗口办理业务，但是有时候会出现1,2号窗口满了，候客区满了，银行还在进人，此时剩下的三个窗口就会陆续开放知道线程池达到最大数量，如果此时还有人要进来，则这些人要么等待要么离开（这就是拒绝策略），如果当银行里的所有人办理完业务了，过了一段时间还是没有人来，那么3,4,5号窗口就会再次关闭（超时等待，过了一定时间就停止）
 
@@ -1652,7 +1652,7 @@ public class Demo01 {
 
 >4种拒绝策略
 
-![image-20210812211001517](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812211001517.png)
+![image-20210812211001517](.\typora-user-images\image-20210812211001517.png)
 
 
 
@@ -1699,7 +1699,7 @@ public interface Runnable {
 
 
 
-![image-20210812215402440](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812215402440.png)
+![image-20210812215402440](.\typora-user-images\image-20210812215402440.png)
 
 
 
@@ -1707,7 +1707,7 @@ public interface Runnable {
 
 
 
-![image-20210812220245202](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812220245202.png)
+![image-20210812220245202](.\typora-user-images\image-20210812220245202.png)
 
 
 
@@ -1741,7 +1741,7 @@ public class Demo01 {
 
 >断定型接口
 
-![image-20210812220838835](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812220838835.png)
+![image-20210812220838835](.\typora-user-images\image-20210812220838835.png)
 
 
 
@@ -1777,7 +1777,7 @@ public class Demo02 {
 
 >Consumer 消费型接口
 
-![image-20210812221445877](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812221445877.png)
+![image-20210812221445877](.\typora-user-images\image-20210812221445877.png)
 
 
 
@@ -1810,7 +1810,7 @@ public class Demo03 {
 
 >Supplier  供给型接口
 
-![image-20210812221928985](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210812221928985.png)
+![image-20210812221928985](.\typora-user-images\image-20210812221928985.png)
 
 ```java
 /**
@@ -1844,7 +1844,7 @@ public class Demo04 {
 
 
 
-![image-20210813100725737](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813100725737.png)
+![image-20210813100725737](.\typora-user-images\image-20210813100725737.png)
 
 
 
@@ -1892,7 +1892,7 @@ public class Test {
 
 ForkJoin 在JDK 1.7，并行执行任务！提高效率，只有在大数据量时才能显现出来他的作用
 
-![image-20210813102603551](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813102603551.png)
+![image-20210813102603551](.\typora-user-images\image-20210813102603551.png)
 
 
 
@@ -1902,7 +1902,7 @@ ForkJoin 在JDK 1.7，并行执行任务！提高效率，只有在大数据量�
 
 这里面维护的都是双端队列
 
-![image-20210813102826032](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813102826032.png)
+![image-20210813102826032](.\typora-user-images\image-20210813102826032.png)
 
 
 
@@ -1910,7 +1910,7 @@ ForkJoin 在JDK 1.7，并行执行任务！提高效率，只有在大数据量�
 
 ![image-20210813105302598](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813105302598.png)
 
-![image-20210813105214357](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813105214357.png)
+![image-20210813105214357](.\typora-user-images\image-20210813105214357.png)
 
 
 
@@ -2012,7 +2012,7 @@ public class Test {
 
 >Future 设计初衷：对将来的某个事件的结果进行建模
 
-![image-20210813140922108](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813140922108.png)
+![image-20210813140922108](.\typora-user-images\image-20210813140922108.png)
 
 
 
@@ -2101,11 +2101,11 @@ JMM就是线程在操作**工作内存**与**主存**的规定
 
 **JMM中有8种约定(操作)**
 
-![image-20210813145033622](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813145033622.png)
+![image-20210813145033622](.\typora-user-images\image-20210813145033622.png)
 
 
 
-![image-20210813145229051](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813145229051.png)
+![image-20210813145229051](.\typora-user-images\image-20210813145229051.png)
 
 
 
@@ -2135,7 +2135,7 @@ JMM就是线程在操作**工作内存**与**主存**的规定
 - 如果一个变量没有被lock，就不能对其进行unlock操作。也不能unlock一个被其他线程锁住的变量
 - 对一个变量进行unlock操作之前，必须把此变量同步回主内存
 
-![image-20210813150140470](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813150140470.png)
+![image-20210813150140470](.\typora-user-images\image-20210813150140470.png)
 
 
 
@@ -2218,11 +2218,11 @@ public class VDemo02 {
 
 
 
-![image-20210813152218879](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813152218879.png)
+![image-20210813152218879](.\typora-user-images\image-20210813152218879.png)
 
 使用原子类，解决原子性问题
 
-![image-20210813152338710](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813152338710.png)
+![image-20210813152338710](.\typora-user-images\image-20210813152338710.png)
 
 ```java
 package com.xiang.tvolatile;
@@ -2309,7 +2309,7 @@ y = x * x // 4
 
 2、可以保证某些变量的内存可见性(volatile的可见性就是这样的）
 
-![image-20210813161559385](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813161559385.png)
+![image-20210813161559385](.\typora-user-images\image-20210813161559385.png)
 
 即，加了volatile后，会在其上下加一个内存屏障，可以保证避免指令重排的现象产生
 
@@ -2468,11 +2468,11 @@ public class CASDemo {
 
 >Unsafe类
 
-![image-20210813194024266](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813194024266.png)
+![image-20210813194024266](.\typora-user-images\image-20210813194024266.png)
 
 
 
-![image-20210813194309438](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813194309438.png)
+![image-20210813194309438](.\typora-user-images\image-20210813194309438.png)
 
 ```java
 compareAndSwapInt(var1,var2,var5,var5+var4)
@@ -2482,7 +2482,7 @@ compareAndSwapInt(var1,var2,var5,var5+var4)
 
 
 
-![image-20210813194700335](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813194700335.png)
+![image-20210813194700335](.\typora-user-images\image-20210813194700335.png)
 
 CAS：比较当前的工作内存中的值和主内存中的值，如果这个值是期望的，就执行操作，否则就一直循环（底层是自旋锁）
 
@@ -2498,7 +2498,7 @@ CAS：比较当前的工作内存中的值和主内存中的值，如果这个�
 
 >CAS: ABA 问题（狸猫换太子）
 
-![image-20210813201048608](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813201048608.png)
+![image-20210813201048608](.\typora-user-images\image-20210813201048608.png)
 
 ABA：比如有两条线程同时对某一资源进行操作，其中线程1中进行CAS(1,2)，线程2中进行了两次CAS，第一次把CAS(1,3),第二次CAS(3,1), 此时对于线程1来说 A还是1，线程1就被欺骗了 
 
@@ -2591,7 +2591,7 @@ public class CASDemo {
 
 **Integer使用了对象缓存机制，默认范围是-128~127，推荐使用静态工厂方法valueOf获取对象实例，而不是new，,因为valueOf使用缓存，而new一定会创建新的对象分配新的内存空间;**
 
-![image-20210813204119497](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813204119497.png)
+![image-20210813204119497](.\typora-user-images\image-20210813204119497.png)
 
 
 
@@ -2619,7 +2619,7 @@ public class CASDemo {
 
 可重入锁(递归锁)不管是 lock还是synchronized都是可重入锁
 
-![image-20210813205213982](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813205213982.png)
+![image-20210813205213982](.\typora-user-images\image-20210813205213982.png)
 
 
 
@@ -2712,7 +2712,7 @@ class Phone2 {
 
 spinlock
 
-![image-20210813210822002](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813210822002.png)
+![image-20210813210822002](.\typora-user-images\image-20210813210822002.png)
 
 
 
@@ -2798,7 +2798,7 @@ public class TestSpinLock {
 
 结果
 
-![image-20210813215006250](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813215006250.png)
+![image-20210813215006250](.\typora-user-images\image-20210813215006250.png)
 
 
 
@@ -2810,7 +2810,7 @@ public class TestSpinLock {
 
 >死锁是什么
 
-![image-20210813215748349](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813215748349.png)
+![image-20210813215748349](.\typora-user-images\image-20210813215748349.png)
 
 死锁测试，怎么排除死锁
 
@@ -2818,8 +2818,8 @@ public class TestSpinLock {
 
 1、使用`jps-l`定位进程号
 
-![image-20210813221716396](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813221716396.png)
+![image-20210813221716396](.\typora-user-images\image-20210813221716396.png)
 
 2、使用`jstack 进程号`找到死锁问题
 
-![image-20210813222238007](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210813222238007.png)
+![image-20210813222238007](.\typora-user-images\image-20210813222238007.png)

@@ -38,13 +38,13 @@
 
 ### 1.3、组成
 
-![image-20210705143232671](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210705143232671.png)
+![image-20210705143232671](.\typora-user-images\image-20210705143232671.png)
 
 ### 1.4、拓展
 
 在Spring的官网有这个介绍：现代化的java开发！说白了就是基于Spring的开发！
 
-![image-20210705143627139](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210705143627139.png)
+![image-20210705143627139](.\typora-user-images\image-20210705143627139.png)
 
 - Spring Boot
   - 一个快速开发的脚手架
@@ -602,7 +602,7 @@ Student{
 
 [官方解释：](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-p-namespace)
 
-![image-20210706152746523](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706152746523.png)
+![image-20210706152746523](.\typora-user-images\image-20210706152746523.png)
 
 使用
 
@@ -650,7 +650,7 @@ xmlns:c="http://www.springframework.org/schema/c"
 
 ### 6.4、bean的作用域
 
-![image-20210706153939017](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706153939017.png)
+![image-20210706153939017](.\typora-user-images\image-20210706153939017.png)
 
 1. 单例模式(Spring默认机制)
 
@@ -842,7 +842,7 @@ public class People {
 
 在Spring4之后，要使用注解开发，必须保证aop的包已经导入
 
-![image-20210706194024365](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706194024365.png)
+![image-20210706194024365](.\typora-user-images\image-20210706194024365.png)
 
 ​	使用注解需要导入context约束，增加注解的支持！
 
@@ -928,7 +928,7 @@ public class People {
 
 JavaConfig是Spring的一个子项目，在Spring4之后，他就成为了一个核心功能！
 
-![image-20210706202851305](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706202851305.png)
+![image-20210706202851305](.\typora-user-images\image-20210706202851305.png)
 
 
 
@@ -1008,7 +1008,7 @@ public class MyTest {
 - 静态代理
 - 动态代理
 
-![image-20210706213532259](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706213532259.png)
+![image-20210706213532259](.\typora-user-images\image-20210706213532259.png)
 
 ### 10.1、静态代理
 
@@ -1128,7 +1128,7 @@ spring-study
 
 在实际的开发中，一般需要增加业务时(即附加操作)，是不会改变原有代码的，防止系统崩盘，于是就要进行横向操作代码完成附加的操作，即，使用代理模式，这就是AOP的思想
 
-![image-20210706221911989](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210706221911989.png)
+![image-20210706221911989](.\typora-user-images\image-20210706221911989.png)
 
 
 
@@ -1264,7 +1264,7 @@ public class Client2 {
 
 AOP (Aspect Oriented Programming)意为:面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
-![image-20210707150429224](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210707150429224.png)
+![image-20210707150429224](.\typora-user-images\image-20210707150429224.png)
 
 ### 11.2、Aop在Spring中的作用
 
@@ -1282,11 +1282,11 @@ AOP (Aspect Oriented Programming)意为:面向切面编程，通过预编译方�
 
 - 连接点(JointPoint):与切入点匹配的执行点。
 
-  ​					![image-20210707150743260](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210707150743260.png)
+  ​					![image-20210707150743260](.\typora-user-images\image-20210707150743260.png)
 
 SpringAOP中，通过Advice定义横切逻辑，Spring中支持5中类型的Advice；
 
-![image-20210707151212543](C:\Users\dell\AppData\Roaming\Typora\typora-user-images\image-20210707151212543.png)
+![image-20210707151212543](.\typora-user-images\image-20210707151212543.png)
 
 即 Aop 在不改变原有代码的情况下，去增加新的功能。
 
